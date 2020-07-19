@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Predict Diabetic</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-lg-6">
+				<h3>Diabetic Prediction</h3>
+				<!-- npreg	glu	bp	skin	serum	bmi	ped	age -->
+				<form method="GET" action="/models/diabetic/result">
+					<div class="form-group">
+						<label>No of Pregnancy</label>
+						<input type="text" value="1" class="form-control" name="npreg">
+					</div>
+					<div class="form-group">
+						<label>Glucose Level</label>
+						<input type="text" value="148" class="form-control" name="glu">
+					</div>
+					<div class="form-group">
+						<label>Blood Pressure</label>
+						<input type="text" value="72" class="form-control" name="bp">
+					</div>
+					<div class="form-group">
+						<label>Skin</label>
+
+						<input type="text" value="35" class="form-control" name="skin">
+					</div>
+					<div class="form-group">
+						<label>Serum</label>
+						<input type="text" value="94" class="form-control" name="serum">
+					</div>
+					<div class="form-group">
+						<label>BMI</label>
+
+						<input type="text" value="26.6" class="form-control" name="bmi">
+					</div>
+					<div class="form-group">
+						<label>Ped</label>
+						<input type="text" value="0.672" class="form-control" name="ped">
+					</div>
+					<div class="form-group">
+						<label>Age</label>
+
+						<input type="text" value="21" class="form-control" name="age">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-success">Predict</button>
+					</div>
+
+				</form>
+			</div>
+			<div class="col-md-6 col-lg-6 col-sm-6">
+				<h3>Features Summary</h3>
+				<ul>
+					<li>preg::Number of times pregnant</li>
+					<li>glu::Plasma glucose concentration a 2 hours in an oral glucose tolerance test</li>
+					<li>bp::Diastolic blood pressure (mm Hg)</li>
+					<li>skin::Triceps skin fold thickness (mm)</li>
+					<li>serun::2-Hour serum insulin (mu U/ml)</li>
+					<li>bmi::Body mass index (weight in kg/(height in m)^2)</li>
+					<li>ped::FunctionDiabetes pedigree function</li>
+					<li>age::Age (years)</li>
+					<li>type::Class variable (0 or 1) 268 of 768 are 1, the others are 0 (0 No DM, 1 has DM)</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

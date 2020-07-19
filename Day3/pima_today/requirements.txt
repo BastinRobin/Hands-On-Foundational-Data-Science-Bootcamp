@@ -1,0 +1,11 @@
+click
+Flask
+gunicorn
+itsdangerous
+Jinja2
+MarkupSafe
+pandas
+scikit-learn
+scipy
+sklearn
+Werkzeug

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Predict Diabetic</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-lg-6" style="margin-top: 100px;">
+				{% if data.result == 'Non diabetic' %}
+				<div class="alert alert-success">
+					<h3>Result: {{ data.result }}</h3>
+				</div>
+				{% endif %}
+
+
+				{% if data.result == 'diabetic' %}
+				<div class="alert alert-danger">
+					<h3>Result: {{ data.result }}</h3>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</body>
+</html>
